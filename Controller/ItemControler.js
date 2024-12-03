@@ -40,15 +40,13 @@ const getOneitem=async(req,res)=>{
         const newItem=await item.findById(id)
         res.status(200).json({
             message:'hello',
-            newItem
-            
+            newItem 
         })
         
     } catch (error) {
         console.log(error.message)
         res.status(400).json({
             message:error.message,
-            
         })
         
     }
@@ -179,7 +177,6 @@ const aggregation=async(req,res)=>{
                 },
             },
         ]);
-
         res.status(200).json({
             message: "Aggregation results fetched successfully",
             result: aggregationResult[0],
